@@ -1,0 +1,27 @@
+sudo mysql
+CREATE DATABASE test;
+use test;
+CREATE TABLE users (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, username VARCHAR(20), email VARCHAR(20), password VARCHAR(20),  role VARCHAR(20), created VARCHAR(20), updated VARCHAR(20));
+
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'Sanya', 'sanya@ya.ru', 'qwerty', 'all', '10.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'alina', 'alina@ya.ru', 'qwerty', 'all', '11.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'alex', 'alex@ya.ru', 'qwerty', 'all', '12.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'jon', 'jon@ya.ru', 'qwerty', 'all', '13.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'endru', 'endru@ya.ru', 'qwerty', 'all', '14.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'mery', 'mery@ya.ru', 'qwerty', 'all', '15.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'nikolay', 'nikolay@ya.ru', 'qwerty', 'all', '16.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'grisha', 'grisha@ya.ru', 'qwerty', 'all', '17.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'ivan', 'ivan@ya.ru', 'qwerty', 'all', '18.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'sonya', 'sonya@ya.ru', 'qwerty', 'all', '19.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'nastya', 'nastya@ya.ru', 'qwerty', 'all', '20.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'marina', 'marina@ya.ru', 'qwerty', 'all', '21.10.2019', '01.01.2020');
+INSERT INTO users (id, username, email, password, role, created, updater) VALUES (NULL, 'lilya', 'lilya@ya.ru', 'qwerty', 'all', '22.10.2019', '01.01.2020');
+
+
+
+mysqldump -u USER -pPASSWORD DATABASE > /path/to/file/dump.sql
+sudo mysqldump -B test > /vagrant/dump.sql робыть бекап (дамп) базы
+
+
+залваем в базу даных бекап 
+sudo mysql < /vagrant/dump.sql
